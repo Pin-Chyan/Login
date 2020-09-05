@@ -1,0 +1,27 @@
+{
+  "name": "Login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pin-Chyan/Login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pin-Chyan/Login/issues"
+  },
+  "homepage": "https://github.com/Pin-Chyan/Login#readme"
+}
