@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
+let router = express.Router();
 const app = express();
 
 
@@ -17,13 +18,14 @@ db.once('open', function(callback) {
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
-	extended: false
+	extended: true
 }));
 
 const Users = require("./../models/Users.model")
 const UserModel = mongoose.model("users");
 
-let router = express.Router();
+router.use(express.json());
+router.use(express.urlencoded());
 
 router.get('/Signup', function(req, res) {
 	res.sendFile(path.join(__dirname+"/../views/SignUp.html"))
@@ -34,11 +36,11 @@ router.get('/Signup', function(req, res) {
 router.post('/Signup', function(req, res) {
 	//console.log(req.body);
 	console.log(req.body);
-	var name = req.query.name;
-	var surname = req.query.surname;
-	var email = req.query.email;
-	var password = req.query.password;
-	var cpassword = req.query.cpassword;
+	var name = req.body.name;
+	var surname = req.body.surname;
+	var email = req.body.email;
+	var password = req.body.password;
+	var cpassword = req.body.cpassword;
 
 	
 	var data = {
