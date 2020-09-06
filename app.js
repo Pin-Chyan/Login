@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = 3000;
-const views = require("./routes/client");
+const views = require("./routes/Users");
 
 app.use(express.json());
-app.use("/routes", views);
+app.use("", views);
+
+
 
 
 app.get("/", (req, res) => {
