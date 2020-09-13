@@ -113,7 +113,7 @@ router.post('/Login', function(req, res) {
 
 	
 	var data = {
-		"email": email,
+		"email": email, 
 		"password": password,
 	}
 
