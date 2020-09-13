@@ -6,13 +6,18 @@ const views = require("./routes/Users");
 
 app.use(express.json());
 app.use("", views);
-
+app.use(express.static('styles'));
 
 
 
 app.get("/", (req, res) => {
 	//handle root
-	res.sendFile(path.join(__dirname+"/Home.html"))
+	if (req.session.email) {
+		res.redirect("/Logged")
+	}
+	else {
+		res.sendFile(path.join(__dirname+"/Home.html"))
+	}
 });
 
 
