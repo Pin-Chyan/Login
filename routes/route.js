@@ -53,9 +53,6 @@ router.get('/', function(req, res) {
 })
 
 
-	//res.sendFile(path.join(__dirname+"/../views/SignUp.html"))
-
-
 //const express = require('express');
 //const session = require('express-session') 
 //const path = require('path');
