@@ -20,7 +20,8 @@
 				<img class="logo" style="width:25%" src="https://www.jappleng.com/application/assets/jspot/images/hd/megumin-c255221419201846.png">
 			</div>
 			<div class="row justify-content-center align-items-center text-center" style="height: fit-content">
-				<Form action="/Signup" method="POST">
+				<!--<Form action="/Signup" method="POST">-->
+				<Form name="signupForm" action="" onsubmit="" method="POST">
 					<p>~~~~~~~~~ Fill in your details below ~~~~~~~~~</p>
 					<div class="form-group">
 						<label for="name">Name</label>
@@ -42,7 +43,7 @@
 						<label for="cpassword">Password Confirm</label>
 						<input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="tell me your secrets again">
 					</div>
-					<button type="submit" onclick="compForm()" class="btn btn-primary" value="Submit">Submit</button>
+					<button type="submit" class="btn btn-primary" value="Submit" onclick="registerPost()">Submit</button>
 				</Form>
 			</div>
 		</article>
@@ -56,6 +57,7 @@
 </html>
 
 <script src="../scripts/Signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
